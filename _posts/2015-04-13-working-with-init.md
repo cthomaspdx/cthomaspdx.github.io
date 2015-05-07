@@ -12,7 +12,7 @@ By C. Thomas Clark https://github.com/cthomaspdx
 
 As a Devops engineer at Househappy.org, I have been tasked to help maintain up-time for our servers and services they provide. If a server does have to reboot unexpectedly it would be nice to have some kind of assurance that when our servers come back online they automatically start their services. 
 
-Case in point: Suppose your cloud server provider, very subtly notified you that your servers were due for an update and needed to be rebooted inorder for the update to take effect. One of the major problem is that many of the homegrown services with out init.d script fail to start back up after reboot. I would like to not have to worry about that happening again, so I decided to do my research. 
+Case in point: Suppose your cloud server provider, very subtly notified you that your servers were due for an update and needed to be rebooted inorder for the update to take effect. One of the major problem is that many of the homegrown services with out init.d script fail to start back up after reboot. I would like to not have to worry about that happening.
 
 Understanding "Sys-v" style init scripts and runlevels 
 
