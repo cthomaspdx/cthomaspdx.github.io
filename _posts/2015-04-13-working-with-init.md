@@ -4,19 +4,19 @@ title: "working with init"
 date: 2015-04-13 10:05:01 -0700
 comments: true
 categories:
-published: true
+published: false
 ---
 ##Create a linux startup service and init.d script from scratch, using chef and debian linux. 
 
 By C. Thomas Clark https://github.com/cthomaspdx
 
-As a Devops engineer at Househappy.org, I have been tasked to help maintain up-time for our servers and services they provide. If a server does have to reboot unexpectedly it would be nice to have some kind of assurance that when our servers come back online they automatically start their services. 
+As a systems engineer, I have been tasked to help maintain up-time for our servers and services they provide. If a server does have to reboot unexpectedly it would be nice to have some kind of assurance that when our servers come back online they automatically start their services. 
 
 Case in point: Suppose your cloud server provider, very subtly notified you that your servers were due for an update and needed to be rebooted inorder for the update to take effect. One of the major problem is that many of the homegrown services with out init.d script fail to start back up after reboot. I would like to not have to worry about that happening.
 
 Understanding "Sys-v" style init scripts and runlevels 
 
-The `/etc` dir contains a set of directories named `/rc?.d` where `?` is their runlevel integers 1-6.  A runlevel is basically the state of the system. i.e. `/etc/rc0.d` is the Halt state or shutdown of the system; while runlevel 1 is "single user" or "rescue mode" where only the most essential services are ran. Runlevel 6 `/etc/rc6.d ` is the reboot runlevel and is the same as halt `rc0.d` but with a reboot call at the end. So this leaves us to play with runlevels 2-5 for multi-user system start up configurations. 
+The `/etc` dir contains a set of directories named `/rc<int>.d` where `<int>` is their runlevel integers 1-6.  A runlevel is basically the state of the system. i.e. `/etc/rc0.d` is the Halt state or shutdown of the system; while runlevel 1 is "single user" or "rescue mode" where only the most essential services are ran. Runlevel 6 `/etc/rc6.d ` is the reboot runlevel and is the same as halt `rc0.d` but with a reboot call at the end. So this leaves us to play with runlevels 2-5 for multi-user system start up configurations. 
 
 You can check which runlevel you are on by runing `/sbin/runlevel`  the second character it returns is the runlevel. 
 
