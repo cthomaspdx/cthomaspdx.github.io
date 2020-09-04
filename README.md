@@ -1,2 +1,2 @@
 # cthomaspdx.github.io
-A little blog site about my adventures in devops
+A little blog site about my adventures in software operations

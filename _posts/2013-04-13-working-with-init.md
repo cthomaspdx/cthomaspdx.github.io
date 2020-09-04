@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "working with init"
-date: 2015-04-13 10:05:01 -0700
+title: "Working with Init"
+date: 2013-04-13 10:05:01 -0700
 comments: true
 categories:
-published: false
+published: true
 ---
 ##Create a linux startup service and init.d script from scratch, using chef and debian linux. 
 
@@ -12,7 +12,7 @@ By C. Thomas Clark https://github.com/cthomaspdx
 
 As a systems engineer, I have been tasked to help maintain up-time for our servers and services they provide. If a server does have to reboot unexpectedly it would be nice to have some kind of assurance that when our servers come back online they automatically start their services. 
 
-Case in point: Suppose your cloud server provider, very subtly notified you that your servers were due for an update and needed to be rebooted inorder for the update to take effect. One of the major problem is that many of the homegrown services with out init.d script fail to start back up after reboot. I would like to not have to worry about that happening.
+Case in point: Suppose your cloud server provider, very subtly notified you that your servers were due for an update and needed to be rebooted in order for the update to take effect. One of the major problem is that many of the homegrown services with out init.d script fail to start back up after reboot. I would like to not have to worry about that happening.
 
 Understanding "Sys-v" style init scripts and runlevels 
 
