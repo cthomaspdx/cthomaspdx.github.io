@@ -1,14 +1,13 @@
 ---
 layout: post
 title: "When Containers Click"
-date: 2015-04-13 10:05:01 -0700
+date: 2017-06-12 10:05:01 -0700
 comments: true
 categories:
-published: true
+published: false
 ---
 ##Realizing the benifits of application containerization as cloud systems engineers. 
 
-### 
 
 In discussing operations around software web applications, many in the field are still reluctant to move to containers like docker or rkt, and container schedulers like Kubrenetes or Nomad. The benefits of containers just aren't very obvious but the added complexity is. So the reluctance seems justified. Furthermore, the marketing of containers seems to be directed towards developers and the benefits of packaging applications with all of their dependencies in a portable format, ending the "works on my machine" narrative. But as the people in charge of the system and operations people the complexities are real.
 
